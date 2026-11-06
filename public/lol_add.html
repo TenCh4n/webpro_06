@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>チャンピオンを追加する</title>
+</head>
+<body>
+    <h2>チャンピオンを追加する</h2>
+    <form action="/lol_add">
+        <label for="id">ID</label>
+        <input type="number" name="id" id="id" required>
+
+        <label for="name">チャンピオン</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="lane">適正レーン</label>
+        <select name="lane" id="lane">
+            <option value="トップ">トップ</option>
+            <option value="ジャングル">ジャングル</option>
+            <option value="ミッド">ミッド</option>
+            <option value="ボット">ボット</option>
+            <option value="サポート">サポート</option>
+        </select>
+
+        <label for="type">タイプ</label>
+        <input type="text" name="type" id="type" required>
+
+        <input type="submit" value="登録">
+    </form>
+</body>
+</html>

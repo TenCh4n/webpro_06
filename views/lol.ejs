@@ -1,0 +1,20 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>LoL チャンピオン一覧</title>
+</head>
+<body>
+  <h2>LoL チャンピオンと適正レーン</h2>
+  <table border="1">
+    <tr><th>ID</th><th>チャンピオン</th><th>適正レーン</th><th>タイプ</th></tr>
+    <% for( let row of data ) { %>
+      <tr><td><%= row.id %></td>
+      <td><%= row.name %></td>
+      <td><%= row.lane %></td>
+      <td><%= row.type %></td></tr>
+    <% } %>
+  </table>
+    <a href="/public/lol_add.html">チャンピオンを追加する</a>
+</body>
+</html>

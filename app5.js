@@ -27,6 +27,32 @@ app.get("/keiyo_add", (req, res) => {
   res.render('db1', { data: station });
 });
 
+let lol = [
+  { id:1, name:"エイトロックス", lane:"トップ", type:"ファイター"},
+  { id:2, name:"ガレン", lane:"トップ", type:"ファイター"},
+  { id:3, name:"リー・シン", lane:"ジャングル", type:"ファイター"},
+  { id:4, name:"マスター・イー", lane:"ジャングル", type:"アサシン"},
+  { id:5, name:"アーリ", lane:"ミッド", type:"メイジ"},
+  { id:6, name:"ヤスオ", lane:"ミッド", type:"ファイター"},
+  { id:7, name:"ジンクス", lane:"ボット", type:"マークスマン"},
+  { id:8, name:"アッシュ", lane:"ボット", type:"マークスマン"},
+  { id:9, name:"スレッシュ", lane:"サポート", type:"サポート"},
+  { id:10, name:"ラックス", lane:"サポート", type:"メイジ"},
+];
+
+app.get("/lol", (req, res) => {
+  res.render('lol', { data: lol });
+});
+
+app.get("/lol_add", (req, res) => {
+  let id = req.query.id;
+  let name = req.query.name;
+  let lane = req.query.lane;
+  let type = req.query.type;
+  lol.push( { id: id, name: name, lane: lane, type: type } );
+  res.render('lol', { data: lol });
+});
+
 app.get("/hello1", (req, res) => {
   const message1 = "Hello world";
   const message2 = "Bon jour";
